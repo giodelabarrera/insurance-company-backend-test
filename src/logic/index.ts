@@ -7,8 +7,18 @@ config();
 
 const { DATA_API_URL } = process.env;
 
+/**
+ * logic
+ *
+ * @version 1.0.0
+ */
 const logic = {
 
+  /**
+   * List the data service clients
+   *
+   * @returns {(Promise<any[]> | never)} Promise object with the clients
+   */
   _listClients(): Promise<any[]> | never {
     const clientsEndpoint = "5808862710000087232b75ac";
 
@@ -17,6 +27,11 @@ const logic = {
       .then((data: any) => data.clients);
   },
 
+  /**
+   * List the data service policies
+   *
+   * @returns {(Promise<any[]> | never)} Promise object with the policies
+   */
   _listPolicies(): Promise<any[]> | never {
     const policiesEndpoint = "580891a4100000e8242b75c5";
 
@@ -25,6 +40,12 @@ const logic = {
       .then((data: any) => data.policies);
   },
 
+  /**
+   * Authenticate a user
+   *
+   * @param {string} email - The email to authenticate user
+   * @returns {(Promise<boolean> | never)} Promise object with the response of the authentication
+   */
   authenticate(email: string): Promise<boolean> | never {
     let user: any;
 
@@ -44,6 +65,13 @@ const logic = {
       });
   },
 
+  /**
+   * Retrieve user by id
+   *
+   * @param {string} email - The email to authenticate user
+   * @param {string} id - The id to retrieve user
+   * @returns {(Promise<any> | never)} Promise object with the target user
+   */
   retrieveUser(email: string, id: string): Promise<any> | never {
     let user: any;
     let targetUser: any;
@@ -70,6 +98,13 @@ const logic = {
       });
   },
 
+  /**
+   * Retrieve user by name
+   *
+   * @param {string} email - The email to authenticate user
+   * @param {string} name - The name to retrieve user
+   * @returns {(Promise<any> | never)} Promise object with the target user
+   */
   retrieveUserByName(email: string, name: string): Promise<any> | never {
     let user: any;
     let targetUser: any;
@@ -96,6 +131,13 @@ const logic = {
       });
   },
 
+  /**
+   * List user policies by user name
+   *
+   * @param {string} email - The email to authenticate user
+   * @param {string} userName - The user name to policies user
+   * @returns {(Promise<any[]> | never)} Promise object with the policies user
+   */
   listPoliciesByUserName(email: string, userName: string): Promise<any[]> | never {
     let user: any;
     let targetUser: any;
@@ -131,6 +173,13 @@ const logic = {
       });
   },
 
+  /**
+   * Retrieve user by policy id
+   *
+   * @param {string} email - The email to authenticate user
+   * @param {string} pocilyId - The policy id to retrieve user
+   * @returns {(Promise<any> | never)} Promise object with policy user
+   */
   retrieveUserByPolicy(email: string, pocilyId: string): Promise<any> | never {
     let user: any;
     let policy: any;
