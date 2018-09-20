@@ -22,7 +22,7 @@
     "max-line-length": [
       true,
       {
-        "limit": 200
+        "limit": 150
       }
     ]
   }
