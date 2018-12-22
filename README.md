@@ -1,5 +1,39 @@
 # Insurance company backend test
 
+Live demo [https://?](https://?)
+
+View the [documentation](./doc/README.md)
+
+## Instalation
+
+Install the dependencies
+
+```sh
+npm i
+```
+
+Builds the app for production to the `build` folder.
+
+```sh
+npm run build
+```
+
+Run the server
+
+```sh
+npm start
+```
+
+## Test
+
+Launches the test runner.
+
+```sh
+npm test
+```
+
+## Backend exercise
+
 As an insurance company we've been asked to develop an application that manages some information about our insurance policies and company clients. To do that,we have two services that provide all the data we need:
 
 - The list of company clients can be found at: http://www.mocky.io/v2/5808862710000087232b75ac
